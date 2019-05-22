@@ -1,4 +1,4 @@
-package com.example;
+package com.dispute;
 
 import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;

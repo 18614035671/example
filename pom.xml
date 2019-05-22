@@ -8,24 +8,22 @@
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo-mybatisplus</artifactId>
+    <groupId>com.disp</groupId>
+    <artifactId>springboot-disputess</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo-mybatisplus</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
-        <mybatisplus.spring.boot.version>1.0.5</mybatisplus.spring.boot.version>
-        <mybatisplus.version>3.1.1</mybatisplus.version>
-        <druid.version>1.1.16</druid.version>
-        <!--基础工具包-->
-        <fastjson.version>1.2.46</fastjson.version>
+        <mybatisplus.spring.boot.version>1.0.5</mybatisplus.spring.boot.version>    <!--mybatisplus-->
+        <mybatisplus.version>3.1.1</mybatisplus.version>                            <!--mybatisplus-->
+        <druid.version>1.1.16</druid.version>                                       <!--druid-->
+        <fastjson.version>1.2.46</fastjson.version>                                 <!--基础工具包-->
         <google.guava.version>20.0</google.guava.version>
-        <!-- apache commons补充包 -->
-        <apache-commons-lang3.version>3.4</apache-commons-lang3.version>
-        <slf4j.version>1.7.7</slf4j.version>		<!-- slf4j日志文件管理包版-->
-        <log4j.version>1.2.17</log4j.version>		<!-- log4j日志文件管理包版-->
+        <apache-commons-lang3.version>3.4</apache-commons-lang3.version>             <!-- apache commons补充包 -->
+        <slf4j.version>1.7.7</slf4j.version>		                                <!-- slf4j日志文件管理包版-->
+        <log4j.version>1.2.17</log4j.version>		                                <!-- log4j日志文件管理包版-->
     </properties>
 
     <dependencies>
@@ -50,6 +48,18 @@
             <version>2.0.1</version>
         </dependency>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <!--mybatis plus-->
+        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatisplus-spring-boot-starter</artifactId>
             <version>${mybatisplus.spring.boot.version}</version>
@@ -60,14 +70,54 @@
             <version>${mybatisplus.version}</version>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatisplus.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
         </dependency>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>${druid.version}</version>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.7.0</version>
         </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.vip.vjtools</groupId>
+            <artifactId>vjkit</artifactId>
+            <version>1.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+            <version>3.8.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lmax</groupId>
+            <artifactId>disruptor</artifactId>
+            <version>3.3.11</version>
+        </dependency>
+        
         <!--FastJson-->
         <dependency>
             <groupId>com.alibaba</groupId>
